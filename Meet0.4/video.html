@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Base styles for the video container */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      overflow: hidden;
+      max-width: 100%; /* Ensures the video doesn't exceed its container */
+      margin: 0 auto; /* Centers the video */
+      background-color: black;
+    }
+
+   .video-container>video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }/*
+    .video-container>video{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+    @media(min-aspect-ratio:16/9){
+        .video-container>video{
+            width:100%;
+            height: auto;
+        }
+    }
+    
+    @media(max-aspect-ratio:16/9){
+        .video-container>video{
+            width:auto;
+            height:100%;
+        }
+    } */
+  </style>
+</head>
+
+<body>
+  <div class="video-container">
+    <video id="myVideo" autoplay muted controls >
+      <source src="./session ki bheedeo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var video = document.getElementById("myVideo");
+
+      // Set the time range to start and end (in seconds)
+      /*var startTime = 108;
+      var endTime = 131;*/
+
+      // Hide controls
+      video.controls = false;
+
+      // Add event listener for the 'loadedmetadata' event
+      video.addEventListener('loadedmetadata', function () {
+        // Set the current time to the start time
+        video.currentTime = startTime;
+
+        // Add event listener for the 'timeupdate' event
+        video.addEventListener('timeupdate', function () {
+          // If the current time is greater than or equal to the end time, pause the video
+          if (video.currentTime >= endTime) {
+            video.pause();
+          }
+        });
+
+        // Play the video
+        video.play();
+      });
+    });
+  </script>
+</body>
+
+</html>

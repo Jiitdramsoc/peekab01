@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is Reality?</title>
+
+  <!-- Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+    body {
+      background-color:black;
+    }
+  
+    .profile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .button {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .rbutton{
+        width: 4rem;
+      height: 45px; 
+      border: 1px solid transparent;
+      border-radius: 25px;
+      padding: .5rem; 
+      text-align: center;
+      display: inline-block;
+      margin: 0 auto;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 12px;
+      box-shadow: 0 4px 8px rgba(255, 122, 122, 0.3);
+      transition: border-color 0.3s ease;
+      background-color: transparent; 
+      position: relative;
+      top: -168px;
+     left: 177px;
+    }
+    .bbutton {
+      width: 4rem;
+      height: 45px; 
+      border: 1px solid transparent;
+      border-radius: 25px;
+      padding: .5rem;
+      text-align: center;
+      display: inline-block;
+      margin: 0 auto;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 12px;
+      box-shadow: 0 4px 8px rgba(125, 93, 255, 0.3);
+      transition: border-color 0.3s ease;
+      background-color: transparent; 
+      position: relative;
+      top: -168px;
+      left: -181px;
+    }
+
+    .rbutton {
+      color: red;
+    }
+
+    .bbutton {
+      color:blue;
+    }
+
+    @media (max-width: 768px) {
+      .rbutton{
+        position:relative;
+        top: -200px;
+       left: 8px
+      }
+      .bbutton {
+        position: relative;
+        top: -200px;
+        left: -9px;
+      }
+    }
+
+
+    .rbutton:hover {
+      border-color:darkred;
+    }
+
+    .bbutton:hover {
+      border-color:darkblue;
+    }
+  </style>
+</head>
+
+<body> 
+  <div class="container">
+    <div class="row">
+      <div class="col-12 profile">
+        <img src="./1591806083345.jpeg" alt="Red pill or blue pill?" class="img-fluid" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 button me-6">
+        <div class="rbutton ps-9">
+          <a style="text-decoration:none;" href="./video.html">
+            <button>Red</button>
+          </a>
+        </div>
+        <div class="bbutton">
+          <a style="text-decoration:none;" href="./redirect2.html">
+            <button>Blue</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
